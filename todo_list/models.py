@@ -10,8 +10,8 @@ class Task(models.Model):
     task_done = models.BooleanField(default=False)
     
     
-    def create(self):
-        self.created_date = timezone.now()
+    def done(self):
+        self.task_done = True
         self.save()
     
     def __str__(self) -> str:
